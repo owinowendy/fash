@@ -1,0 +1,47 @@
+.container {
+  max-width: 700px;
+  background-color: white;
+  border-radius: 20px
+}
+
+.radio-button {
+  border: 1px solid hsl(146, 26%, 60%);
+  border-radius: 5px;
+  height: 50px;
+
+}
+
+.radio {
+  padding-top: 4px;
+}
+
+.selected-radio {
+  background-color: hsl(148, 38%, 91%);
+
+}
+
+span {
+  color: hsl(169, 82%, 27%)
+}
+
+button {
+  background-color: hsl(141, 82%, 27%);
+  color: white;
+}
+
+.v-checkbox {
+  color: hsl(169, 82%, 27%);
+}
+
+.mobile-style{
+  max-width: 90%;
+  margin-bottom: 2rem
+  
+}
+
+.success-message{
+  position: absolute;
+  top: 0.5rem;
+  left: 720px
+
+}
