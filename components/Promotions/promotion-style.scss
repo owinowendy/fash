@@ -48,7 +48,7 @@
 }
 
 .v-icon.arrow-icon {
-  color: rgba(0, 0, 0, 0.87);
+  color:rgb(31, 29, 29);
   position: absolute;
   display: block;
   font-size: 60px;
@@ -69,7 +69,8 @@
     overflow: hidden;
     .item.odd {
       .inner-bg {
-        background: $palette-primary-dark
+        background: rgb(2, 52, 2); // Changed to green
+
       }
       .desc {
         span {
@@ -79,7 +80,7 @@
     }
     .item.even {
       .inner-bg {
-        background: $palette-secondary-dark
+        background: green; // Changed to green
       }
       .desc {
         span {

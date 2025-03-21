@@ -44,62 +44,62 @@ import SimpleThumbCard from '../Cards/SimpleThumb';
 const dataProducts = [
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'Ksh 780.00',
     img: imgAPI.fashion[17],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh780.00',
     img: imgAPI.fashion[18],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh780.00',
     img: imgAPI.fashion[19],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh780.00',
     img: imgAPI.fashion[20],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh 780.00',
     img: imgAPI.fashion[21],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh 780.00',
     img: imgAPI.fashion[22],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh 780.00',
     img: imgAPI.fashion[23],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh 780.00',
     img: imgAPI.fashion[24],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh780.00',
     img: imgAPI.fashion[25],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh 780.00',
     img: imgAPI.fashion[20],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh 780.00',
     img: imgAPI.fashion[22],
   },
   {
     title: 'Vivamus Sit Smet',
-    price: '$780.00',
+    price: 'ksh 780.00',
     img: imgAPI.fashion[23],
   },
 ];
