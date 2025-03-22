@@ -89,10 +89,6 @@
               </ul>
             </div>
           </nav>
-
-          <nav>
-            <setting-menu :invert="invert" />
-          </nav>
         </div>
       </v-container>
     </v-app-bar>
@@ -109,7 +105,6 @@ import logo from '@/assets/images/findmelogo.jpg';
 import link from '@/assets/text/link';
 import brand from '@/assets/text/brand';
 import navMenu from './menu';
-import Settings from './Settings';
 import MobileMenu from './MobileMenu';
 import { useRouter } from '#app';
 
@@ -126,7 +121,6 @@ function createData(name, url, offset) {
 
 export default {
   components: {
-    'setting-menu': Settings,
     MobileMenu,
   },
   props: {
@@ -143,8 +137,8 @@ export default {
 
       router.push(`#${elemId}`);
       smoothScroll({
-        scrollTo: myEl, // scrollTo is also allowed to be number
-        hash: `#${elemId}`, // required if updateHistory is true
+        scrollTo: myEl,
+        hash: `#${elemId}`,
         offset: 0,
       });
     }
@@ -175,12 +169,10 @@ export default {
   },
   computed: {
     isMobile() {
-      const smDown = this.$vuetify.display.smAndDown;
-      return smDown;
+      return this.$vuetify.display.smAndDown;
     },
     isDesktop() {
-      const mdUp = this.$vuetify.display.mdAndUp;
-      return mdUp;
+      return this.$vuetify.display.mdAndUp;
     },
   },
   mounted() {
@@ -208,11 +200,7 @@ export default {
         }
       });
 
-      if (scrollPosition > 70) {
-        this.fixed = true;
-      } else {
-        this.fixed = false;
-      }
+      this.fixed = scrollPosition > 70;
     },
     handleToggleOpen() {
       this.openDrawer = !this.openDrawer;
