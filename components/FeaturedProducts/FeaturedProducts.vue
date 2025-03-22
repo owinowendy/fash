@@ -37,70 +37,51 @@
 
 <script>
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
-import imgAPI from '@/assets/images/imgAPI';
+
 import Title from '../Title';
 import SimpleThumbCard from '../Cards/SimpleThumb';
 
 const dataProducts = [
   {
-    title: 'Vivamus Sit Smet',
-    price: 'Ksh 780.00',
-    img: imgAPI.fashion[17],
+    title: 'Ladies leather jacket',
+    price: 'Ksh 1,500.00',
+    img:'/products/image7.jpg',
+
   },
   {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh780.00',
-    img: imgAPI.fashion[18],
+    title: 'Mens Two piece set',
+    price: 'Ksh 2,000.00',
+    img: '/products/image.png',
   },
   {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh780.00',
-    img: imgAPI.fashion[19],
+    title: 'Mens Hoodie Set',
+    price: 'Ksh 3,500.00',
+    img: '/products/image2.jpg',
   },
   {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh780.00',
-    img: imgAPI.fashion[20],
+    title: 'Leather Jacket',
+    price: 'Ksh 4,800.00',
+    img: '/products/image4.jpg',
   },
   {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh 780.00',
-    img: imgAPI.fashion[21],
+    title: 'Ladie TurtleNeck Sweater',
+    price: 'Ksh 1000.00',
+    img: '/products/image5.jpg',
   },
   {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh 780.00',
-    img: imgAPI.fashion[22],
+    title: 'Short sleeve polo',
+    price: 'Ksh 840.00',
+    img: '/products/image6.jpg',
   },
   {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh 780.00',
-    img: imgAPI.fashion[23],
+    title: '3 piece ladies stipped pants',
+    price: 'Ksh 1,200.00',
+    img: '/products/image8.jpg',
   },
   {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh 780.00',
-    img: imgAPI.fashion[24],
-  },
-  {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh780.00',
-    img: imgAPI.fashion[25],
-  },
-  {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh 780.00',
-    img: imgAPI.fashion[20],
-  },
-  {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh 780.00',
-    img: imgAPI.fashion[22],
-  },
-  {
-    title: 'Vivamus Sit Smet',
-    price: 'ksh 780.00',
-    img: imgAPI.fashion[23],
+    title: 'Mens Two piece set',
+    price: 'Ksh 900.00',
+    img: '/products/image2.jpg'
   },
 ];
 

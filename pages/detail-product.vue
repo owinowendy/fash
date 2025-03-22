@@ -1,119 +1,65 @@
 <template>
   <div class="main-wrap">
+    <!-- Header -->
     <header-main invert />
+
     <main class="container-wrap">
+      <!-- Back Button -->
+      <div class="back-button">
+        <v-btn icon @click="$router.go(-1)">
+          <v-icon>mdi-arrow-left</v-icon>
+        </v-btn>
+        <span class="page-title">Product Details</span>
+      </div>
+
+      <!-- Product Image -->
       <v-row justify="center">
-        <v-col sm="5" md="5" cols="12" class="px-6">
+        <v-col sm="10" md="8" cols="12" class="px-4">
           <figure class="figure">
-            <img :src="imgAPI.fashion[35]" alt="product">
+            <img :src="product.image" alt="product">
           </figure>
         </v-col>
-        <v-col sm="7" md="5" cols="12" class="px-6">
-          <h4 class="use-text-title2">
-            Floral Plimsoll
-          </h4>
-          <p class="use-text-caption pb-2">
-            {{ $t('fashionLanding.detail_id') }}
-            :
-            14210160762
-          </p>
-          <h4 class="price use-text-title2">
-            $ 780.00
-          </h4>
-          <p class="desc text-paragraph">
-            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.
-          </p>
-          <div class="size">
-            {{ $t('fashionLanding.detail_size') }}
-            <ul>
-              <li>XS</li>
-              <li>S</li>
-              <li>M</li>
-              <li>L</li>
-              <li>XL</li>
-            </ul>
+      </v-row>
+
+      <!-- Report Button -->
+      <div class="report-section">
+  <v-btn color="red" class="report-button" rounded large>
+    <v-icon left>mdi-alert</v-icon> Report
+  </v-btn>
+</div>
+
+
+      <!-- Product Details -->
+      <v-row justify="center">
+        <v-col sm="10" md="8" cols="12" class="px-4">
+          <div class="details-box">
+            <p><strong>ShopName:</strong> {{ product.shopName || 'IFTIN G1' }}</p>
+            <p><strong>Address:</strong> {{ product.address || 'Eastleigh' }}</p>
+            <p><strong>Price:</strong> KSH {{ product.price || '800' }}</p>
+            <p><strong>Contact:</strong> {{ product.contact || '0743209616' }}</p>
+
+            <!-- Call Button -->
+            <v-btn
+              rounded="xl"
+              color="green"
+              :href="'tel:' + (product.contact || '0743209616')"
+              class="call-button"
+            >
+              <v-icon left>mdi-phone</v-icon> Call
+            </v-btn>
           </div>
-          <v-btn
-            size="large"
-            block
-            color="primary"
-            href="#"
-            class="button"
-          >
-            {{ $t('fashionLanding.detail_btn') }}
-          </v-btn>
         </v-col>
       </v-row>
     </main>
+
+    <!-- Footer -->
     <section class="space-top">
       <footer-main />
     </section>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.container-wrap {
-  padding: spacing(15, 0);
-  @inlcude breakpoints-down(sm) {
-    margin: spacing(10, 0);
-  }
-}
-
-.figure {
-  text-align: center;
-  img {
-    max-width: 100%;
-  }
-}
-
-.price {
-  margin-top: $spacing3;
-}
-
-.desc {
-  margin-top: $spacing3;
-}
-
-.size {
-  text-transform: uppercase;
-  margin: spacing(3, 0);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include breakpoints-down(sm) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: $spacing6;
-  }
-  ul {
-    display: inline-block;
-    padding: 0;
-    @include breakpoints-up(md) {
-      margin: $spacing2;
-      @include margin-left($spacing5);
-    }
-    li {
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      border: 1px solid;
-      @include use-theme(
-        border-color,
-        $palette-primary-dark,
-        $palette-primary-light
-      );
-      text-align: center;
-      @include margin-right($spacing1);
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-}
-</style>
-
 <script>
-import imgAPI from '@/assets/images/imgAPI';
-import brand from '@/assets/text/brand';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -122,13 +68,86 @@ export default {
     'header-main': Header,
     'footer-main': Footer,
   },
-  data: () => ({
-    imgAPI,
-  }),
+  data() {
+    return {
+      product: {},
+    };
+  },
+  mounted() {
+    this.product = this.$route.params.product || {};
+  },
   head() {
     return {
-      title: brand.fashion.name + ' - Detail Product',
+      title: this.product.name ? `${this.product.name} - Product Details` : 'Product Details',
     };
   },
 };
 </script>
+
+<style lang="scss" scoped>
+/* Page Layout */
+.container-wrap {
+  padding: 20px 15px;
+  background-color: #f9f9f9;
+}
+
+/* Back Button and Title */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+
+  .page-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+/* Product Image */
+.figure {
+  text-align: center;
+  img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+  }
+}
+
+/* Report Button */
+.report-section {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  
+
+  .report-button {
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+/* Product Details Box */
+.details-box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+
+  p {
+    font-size: 16px;
+    color: #444;
+    margin: 5px 0;
+  }
+}
+
+/* Call Button */
+.call-button {
+  width: 10%;
+  margin-top: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+</style>

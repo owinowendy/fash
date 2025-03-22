@@ -196,9 +196,19 @@
 }
 
 .simple-thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensures space distribution */
+  text-align: center;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; 
   text-align: center;
   width: 150px;
-  height: 210px !important;
+  height: 300px !important;
   padding: spacing(2, 1);
   transition: all 0.35s ease-out;
   margin: $spacing1 auto;
@@ -206,6 +216,18 @@
   .wrap {
     display: block;
   }
+  .thumb-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    text-decoration: none;
+    width: 90%;
+    height: 70%;
+    
+  }
+  
   .text {
     display: block;
     font-size: 16px;
@@ -217,7 +239,7 @@
   }
   .figure {
     display: block;
-    height: 120px;
+    height: 200px;
     margin: spacing(0, 1, 2);
     text-align: center;
     img {
@@ -230,10 +252,25 @@
     font-weight: $font-bold
   }
   .price {
-    display: block
+    display: block;
+      font-size: 1rem;
+      color: #444;
+      font-weight: bold;
+    
   }
   &:hover {
     @include use-theme(background, $palette-primary-light, $palette-primary-dark);
     @include shadow5
   }
+}
+.call-button {
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 50px; /* Makes it rounded */
+  background-color: green;
+  color: white;
+  margin-top: auto; /* Pushes it to the bottom */
+  padding: 10px;
+  
 }

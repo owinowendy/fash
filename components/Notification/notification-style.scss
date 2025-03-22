@@ -11,7 +11,7 @@
     max-width: none;
     font-size: 16px;
     color: $palette-common-white;
-    background: $palette-common-black;
+    background-color: green;
     border-radius: 0;
     @include breakpoints-up(sm) {
       padding: spacing(0.5, 2)

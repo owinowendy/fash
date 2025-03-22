@@ -1,23 +1,45 @@
 <template>
-  <v-btn
-    :href="link.fashion.detail"
-    variant="plain"
-    class="simple-thumb"
-  >
-    <span class="wrap">
-      <span class="figure">
-        <img :src="img" alt="title">
+  <div class="simple-thumb">
+    <v-btn
+      variant="plain"
+      class="thumb-wrap"
+    >
+      <span class="wrap">
+        <span class="figure">
+          <img :src="img" alt="title">
+        </span>
+        <span class="text">{{ title }}</span>
+        <span class="price">
+          <strong>{{ price }}</strong>
+        </span>
       </span>
-      <span class="text">{{ title }}</span>
-      <span class="price">
-        <strong>{{ price }}</strong>
-      </span>
-    </span>
-  </v-btn>
+    </v-btn>
+    <v-btn
+      @click="handleCall"
+      color="green"
+      rounded
+      class="call-button"
+    >
+      <v-icon left>mdi-phone</v-icon> Call Us
+    </v-btn>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 @import './card-style.scss';
+
+.simple-thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.call-button {
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+}
 </style>
 
 <script>
@@ -37,11 +59,20 @@ export default {
       type: String,
       required: true,
     },
+    phone: {
+      type: String,
+      default: '0743209616', // Default contact number
+    },
   },
   data() {
     return {
       link,
     };
+  },
+  methods: {
+    handleCall() {
+      window.location.href = `tel:${this.phone}`;
+    },
   },
 };
 </script>
