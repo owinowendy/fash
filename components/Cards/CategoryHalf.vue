@@ -14,15 +14,7 @@
         &nbsp;Items
       </span>
       <hidden point="xsDown">
-        <v-btn
-          block
-          size="large"
-          variant="outlined"
-          color="secondary"
-          class="button"
-        >
-          See Detail
-        </v-btn>
+       
       </hidden>
     </span>
   </div>

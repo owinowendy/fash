@@ -9,9 +9,9 @@
             secondary="Categories"
           />
         </v-col>
-        <v-col md="3" sm="6" cols="12">
+        <v-col md="3" sm="6" cols="12"  class="category-image">
           <category-full-card
-            :img="imgAPI.fashion[11]"
+            img="/products/imagea.jpg"
             title="Woman Shoes"
             total="24"
             background="eddacf"
@@ -19,17 +19,17 @@
         </v-col>
         <v-col md="3" sm="6" cols="12">
           <category-full-card
-            :img="imgAPI.fashion[12]"
+            img="/products/imagei.jpg"
             title="Woman bag"
             total="24"
-            background="eddacf"
+            background="green"
           />
         </v-col>
       </v-row>
       <v-row class="spacing3">
         <v-col md="6" cols="12" class="py-0">
           <category-half-card
-            :img="imgAPI.fashion[13]"
+          img="/products/image5.jpg"
             title="Men Casual"
             total="24"
             background="D9D8C9"
@@ -38,7 +38,7 @@
           <v-row class="spacing3">
             <v-col md="6" sm="6" cols="12">
               <category-full-card
-                :img="imgAPI.fashion[14]"
+                img="/products/imagem.jpg"
                 title="Men Watch"
                 total="24"
                 background="e7ddd9"
@@ -46,7 +46,7 @@
             </v-col>
             <v-col md="6" sm="6" cols="12">
               <category-full-card
-                :img="imgAPI.fashion[15]"
+              img="/products/imagen.jpg"
                 title="Men Shoes"
                 total="24"
                 background="f2dede"
@@ -56,7 +56,7 @@
         </v-col>
         <v-col md="6" cols="12" class="py-0">
           <category-half-card
-            :img="imgAPI.fashion[16]"
+            img="/products/sportsw.jpg"
             title="Woman Sport"
             total="24"
             background="f3f7bc"

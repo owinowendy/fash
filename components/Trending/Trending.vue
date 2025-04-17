@@ -2,7 +2,7 @@
   <div class="root">
     <hidden point="xsDown">
       <div class="grid-25">
-        <img :src="imgAPI.fashion[8]" alt="trending">
+        <img src="/products/image16.jpg" alt="trending">
         <v-btn variant="text" class="overlay">
           <h5 class="use-text-subtitle2">
             Autumn Show
@@ -10,7 +10,7 @@
         </v-btn>
       </div>
       <div class="grid-50">
-        <img :src="imgAPI.fashion[9]" alt="trending">
+        <img src="/products/image12.jpg" alt="trending">
         <v-btn variant="text" class="overlay">
           <h5 class="use-text-subtitle2">
             New Trending
@@ -21,7 +21,7 @@
         </v-btn>
       </div>
       <div class="grid-25">
-        <img :src="imgAPI.fashion[10]" alt="trending">
+        <img src="/products/image.jpg" alt="trending">
         <v-btn variant="text" class="overlay">
           <h5 class="use-text-subtitle2">
             Man Collection
@@ -36,7 +36,7 @@
       >
         <splide-slide>
           <div class="grid-25">
-            <img :src="imgAPI.fashion[8]" alt="trending">
+            <img src="" alt="trending">
             <v-btn variant="text" class="overlay">
               <h5 class="use-text-subtitle2">
                 Autumn Show
@@ -46,7 +46,7 @@
         </splide-slide>
         <splide-slide>
           <div class="grid-50">
-            <img :src="imgAPI.fashion[9]" alt="trending">
+            <img src="/products/imagef.jpg" alt="trending">
             <v-btn variant="text" class="overlay">
               <h5 class="use-text-subtitle2">
                 New Trending
@@ -59,7 +59,7 @@
         </splide-slide>
         <splide-slide>
           <div class="grid-25">
-            <img :src="imgAPI.fashion[10]" alt="trending">
+            <img src="" alt="trending">
             <v-btn variant="text" class="overlay">
               <h5 class="use-text-subtitle2">
                 Man Collection

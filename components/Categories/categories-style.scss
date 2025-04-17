@@ -3,3 +3,19 @@
     text-align: center
   }
 }
+
+.category {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 16px;
+  border-radius: 12px;
+  height: 220px; // adjust to your needs
+  @include breakpoints-down(xs) {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+}

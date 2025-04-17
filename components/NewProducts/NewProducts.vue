@@ -14,7 +14,7 @@
         </v-col>
         <v-col md="3" sm="4" cols="12">
           <product-ratting-card
-            :img="imgAPI.fashion[5]"
+          img="/products/image.jpg"
             :ratting="4"
             text="It is a long established"
             price="ksh 9000.00"
@@ -22,7 +22,7 @@
         </v-col>
         <v-col md="3" sm="4" cols="12">
           <product-ratting-card
-            :img="imgAPI.fashion[6]"
+          img="/products/imaged.jpg"
             :ratting="5"
             text="It is a long established"
             price="ksh 9000.00"
@@ -30,7 +30,8 @@
         </v-col>
         <v-col md="3" sm="4" cols="12">
           <product-ratting-card
-            :img="imgAPI.fashion[7]"
+          img="/products/imagee.jpg"
+
             :ratting="5"
             text="It is a long established"
             price="ksh 8000.00"

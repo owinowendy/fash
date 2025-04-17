@@ -19,7 +19,7 @@
                       <hidden point="mdUp">
                         <div class="background">
                           <figure>
-                            <img :src="content[Math.abs(currentImg) % content.length].image" alt="promotion">
+                            <img src="" alt="promotion">
                           </figure>
                         </div>
                       </hidden>
@@ -49,7 +49,7 @@
                     <hidden point="smDown">
                       <div class="image">
                         <figure>
-                          <img :src="content[Math.abs(currentImg) % content.length].image" alt="promotion">
+                      
                         </figure>
                       </div>
                     </hidden>

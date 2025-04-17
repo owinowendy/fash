@@ -43,18 +43,18 @@ import SimpleThumbCard from '../Cards/SimpleThumb';
 
 const dataProducts = [
   {
-    title: 'Ladies leather jacket',
+    title: 'Ladies dress',
     price: 'Ksh 1,500.00',
-    img:'/products/image7.jpg',
+    img:'/products/image1.jpg',
 
   },
   {
     title: 'Mens Two piece set',
     price: 'Ksh 2,000.00',
-    img: '/products/image.png',
+    img: '/products/image.jpg',
   },
   {
-    title: 'Mens Hoodie Set',
+    title: 'Womens Two-Piece',
     price: 'Ksh 3,500.00',
     img: '/products/image2.jpg',
   },
@@ -76,12 +76,12 @@ const dataProducts = [
   {
     title: '3 piece ladies stipped pants',
     price: 'Ksh 1,200.00',
-    img: '/products/image8.jpg',
+    img: '/products/image10.jpg',
   },
   {
     title: 'Mens Two piece set',
     price: 'Ksh 900.00',
-    img: '/products/image2.jpg'
+    img: '/products/imageg.jpg'
   },
 ];
 
