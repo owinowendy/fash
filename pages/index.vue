@@ -27,8 +27,8 @@
         <section id="contactUs">
           <ContactUs />
         </section>
-        <section id="s" class="space-top">
-          <categories />
+        <section id="SignupForm" class="space-top">
+          <SignupForm/>
         </section>
         <section id="feature" class="space-top-short">
           <feature />

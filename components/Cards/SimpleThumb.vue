@@ -14,14 +14,7 @@
         </span>
       </span>
     </v-btn>
-    <v-btn
-      @click="handleCall"
-      color="green"
-      rounded
-      class="call-button"
-    >
-      <v-icon left>mdi-phone</v-icon> Call Us
-    </v-btn>
+   
   </div>
 </template>
 
@@ -35,11 +28,7 @@
   gap: 8px;
 }
 
-.call-button {
-  width: 100%;
-  font-size: 14px;
-  text-transform: uppercase;
-}
+
 </style>
 
 <script>
