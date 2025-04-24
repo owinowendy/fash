@@ -55,11 +55,18 @@
 @import './testi-style.scss';
 </style>
 
+
+
+
 <script setup>
+
+
 const appImages = [
-  "/images/app-screenshot1.jpg",
-  "/images/app-screenshot2.jpg",
-  "/images/app-screenshot3.jpg"
+ 
+"/products/Login.jpg",
+  "/products/register.jpg",
+"/products/clothes.jpg",
+
 ]
 
 const currentImageIndex = ref(0)

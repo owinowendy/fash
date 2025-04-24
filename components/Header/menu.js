@@ -1,4 +1,4 @@
-import Signup from "../SignUp";
+
 
 const menu = [
   'all-new',
@@ -7,7 +7,7 @@ const menu = [
   'featured',
   'testimonials',
   'blog',
-  'Signup',
+  
 ];
 
 export default menu;

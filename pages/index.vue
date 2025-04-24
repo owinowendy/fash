@@ -27,9 +27,7 @@
         <section id="contactUs">
           <ContactUs />
         </section>
-        <section id="SignupForm" class="space-top">
-          <SignupForm/>
-        </section>
+        
         <section id="feature" class="space-top-short">
           <feature />
         </section>
@@ -118,7 +116,7 @@ import Hidden from '@/components/Hidden';
 import PageNav from '@/components/PageNav';
 import Notification from '@/components/Notification';
 import brand from '@/assets/text/brand';
-import SignupForm from '~/components/SignUp/SignupForm.vue';
+
 import { defineNuxtComponent, useRouter, useCookie } from '#app';
 
 export default defineNuxtComponent({
@@ -137,7 +135,7 @@ export default defineNuxtComponent({
     PageNav,
     Hidden,
     Notification,
-    SignupForm,
+    
   },
   setup() {
     // push route to the stored cookie languages only for index page
