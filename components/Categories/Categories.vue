@@ -13,7 +13,7 @@
           <category-full-card
             img="/products/imagea.jpg"
             title="Woman Shoes"
-            total="24"
+            
             background="eddacf"
           />
         </v-col>
@@ -21,8 +21,8 @@
           <category-full-card
             img="/products/imagei.jpg"
             title="Woman bag"
-            total="24"
-            background="green"
+            
+            background="e7ddd9"
           />
         </v-col>
       </v-row>
@@ -31,7 +31,7 @@
           <category-half-card
           img="/products/image5.jpg"
             title="Men Casual"
-            total="24"
+            
             background="D9D8C9"
             type="top-over"
           />
@@ -40,7 +40,7 @@
               <category-full-card
                 img="/products/imagem.jpg"
                 title="Men Watch"
-                total="24"
+                
                 background="e7ddd9"
               />
             </v-col>
@@ -48,7 +48,7 @@
               <category-full-card
               img="/products/imagen.jpg"
                 title="Men Shoes"
-                total="24"
+                
                 background="f2dede"
               />
             </v-col>
@@ -58,7 +58,7 @@
           <category-half-card
             img="/products/sportsw.jpg"
             title="Woman Sport"
-            total="24"
+            
             background="f3f7bc"
             type="bottom-over"
           />

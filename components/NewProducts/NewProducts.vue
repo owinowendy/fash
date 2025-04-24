@@ -8,7 +8,7 @@
             primary="New"
             secondary="Arrivals"
           />
-          <p class="use-text-paragrpah">
+          <p class="use-text-paragrpah" style="color: white">
             {{ $t('fashionLanding.new_desc') }}
           </p>
         </v-col>
@@ -17,7 +17,7 @@
           img="/products/image.jpg"
             :ratting="4"
             text="It is a long established"
-            price="ksh 9000.00"
+            
           />
         </v-col>
         <v-col md="3" sm="4" cols="12">
@@ -25,7 +25,7 @@
           img="/products/imaged.jpg"
             :ratting="5"
             text="It is a long established"
-            price="ksh 9000.00"
+          
           />
         </v-col>
         <v-col md="3" sm="4" cols="12">
@@ -34,7 +34,7 @@
 
             :ratting="5"
             text="It is a long established"
-            price="ksh 8000.00"
+          
           />
         </v-col>
       </v-row>

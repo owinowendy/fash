@@ -19,7 +19,7 @@
                       <hidden point="mdUp">
                         <div class="background">
                           <figure>
-                            <img src="" alt="promotion">
+                            <img :src="content[Math.abs(currentImg) % content.length].image" alt="promotion">
                           </figure>
                         </div>
                       </hidden>
@@ -49,7 +49,7 @@
                     <hidden point="smDown">
                       <div class="image">
                         <figure>
-                      
+                          <img :src="content[Math.abs(currentImg) % content.length].image" alt="promotion">
                         </figure>
                       </div>
                     </hidden>
@@ -83,22 +83,21 @@
 </style>
 
 <script>
-import imgAPI from '@/assets/images/imgAPI';
 import Hidden from '../Hidden';
+import screen1 from '@/assets/images/screen1.png';
+import screen2 from '@/assets/images/screen2.png';
+import screen3 from '@/assets/images/screen3.png';
 
+
+;
 const sliderData = [
-  {
-    image: imgAPI.fashion[1],
-  },
-  {
-    image: imgAPI.fashion[2],
-  },
-  {
-    image: imgAPI.fashion[3],
-  },
-  {
-    image: imgAPI.fashion[4],
-  },
+  {image:screen1},
+  {image:screen2},
+
+  {image:screen3},
+
+ 
+
 ];
 
 export default {

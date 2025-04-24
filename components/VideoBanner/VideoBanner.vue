@@ -30,7 +30,7 @@
             </v-btn>
           </hidden>
           <h6 class="use-text-subtitle">
-            {{ $t('fashionLanding.banner_title') }}
+          
           </h6>
           <h2 class="use-text-title">
             #BEanICON

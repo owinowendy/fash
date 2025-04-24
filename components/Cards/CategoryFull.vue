@@ -11,7 +11,7 @@
       </span>
       <span class="total use-text-paragraph">
         {{ total }}
-        Items
+        
       </span>
     </span>
   </v-btn>

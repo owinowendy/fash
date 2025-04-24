@@ -1,7 +1,17 @@
 .root {
   position: relative;
   background-color: rgb(2, 63, 2);
+  text-decoration-color: white;
+  
   @include breakpoints-down(xs) {
     text-align: center
+    
   }
+}
+.use-text-paragrpah {
+  color: white;
+}
+
+.title-main {
+  color: white;
 }

@@ -44,43 +44,43 @@ import SimpleThumbCard from '../Cards/SimpleThumb';
 const dataProducts = [
   {
     title: 'Ladies dress',
-    price: 'Ksh 1,500.00',
+    
     img:'/products/image1.jpg',
 
   },
   {
     title: 'Mens Two piece set',
-    price: 'Ksh 2,000.00',
+   
     img: '/products/image.jpg',
   },
   {
     title: 'Womens Two-Piece',
-    price: 'Ksh 3,500.00',
+   
     img: '/products/image2.jpg',
   },
   {
     title: 'Leather Jacket',
-    price: 'Ksh 4,800.00',
+   
     img: '/products/image4.jpg',
   },
   {
     title: 'Ladie TurtleNeck Sweater',
-    price: 'Ksh 1000.00',
+   
     img: '/products/image5.jpg',
   },
   {
     title: 'Short sleeve polo',
-    price: 'Ksh 840.00',
+   
     img: '/products/image6.jpg',
   },
   {
     title: '3 piece ladies stipped pants',
-    price: 'Ksh 1,200.00',
+    
     img: '/products/image10.jpg',
   },
   {
     title: 'Mens Two piece set',
-    price: 'Ksh 900.00',
+    
     img: '/products/imageg.jpg'
   },
 ];

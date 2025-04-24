@@ -11,7 +11,7 @@
       </span>
       <span class="total use-text-paragraph">
         {{ total }}
-        &nbsp;Items
+        &nbsp;
       </span>
       <hidden point="xsDown">
        
