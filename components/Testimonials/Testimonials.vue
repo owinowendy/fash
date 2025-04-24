@@ -69,12 +69,9 @@
   </div>
 </template>
 
-
-
 <style lang="scss" scoped>
 @import './testi-style.scss';
 </style>
-
 
 <script>
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
