@@ -6,7 +6,8 @@
       </div>
       <div class="subscribe">
         <h5 class="use-text-subtitle">
-          {{ $t('fashionLanding.subscribe_title') }}
+          Account Deletion
+
         </h5>
         <div class="form">
           <form>
@@ -15,9 +16,8 @@
               class="field"
               full-width
             />
-            <v-btn variant="outlined" class="button">
-              {{ $t('fashionLanding.subscribe_button') }}
-            </v-btn>
+            <v-btn variant="outlined" class="button" @click="refreshPage"> Submit
+             </v-btn>
           </form>
         </div>
       </div>
@@ -76,7 +76,22 @@ export default {
     updateCopyrightText() {
       this.brand.fashion.footerText = 'Findme 2025';
     }
-  }
+  },
+  async deleteAccount() {
+      try {
+        // Replace this URL with your real endpoint
+        await fetch('/api/delete-account', {
+          method: 'DELETE'
+        });
+        
+        // Optional: Show a success message, then refresh
+        location.reload();
+      } catch (error) {
+        console.error('Error deleting account:', error);
+        // Optionally show error feedback
+      }
+    }
+
 };
 
 </script>
