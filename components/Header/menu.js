@@ -6,7 +6,7 @@ const menu = [
   'categories',
   'featured',
   'testimonials',
-  'blog',
+  'privacy_policy',
   
 ];
 
