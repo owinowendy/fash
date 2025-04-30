@@ -12,11 +12,12 @@
         <div class="form">
           <form>
             <v-text-field
+            v-model="email"  
               :placeholder="$t('fashionLanding.subscribe_email')"
               class="field"
               full-width
             />
-            <v-btn variant="outlined" class="button" @click="refreshPage"> Submit
+            <v-btn variant="outlined" class="button" @click="deleteAccount"> Submit
              </v-btn>
           </form>
         </div>
@@ -68,6 +69,7 @@ export default {
     logo,
     brand,
     menu,
+    
   }),
   mounted() {
     this.updateCopyrightText();
@@ -78,11 +80,37 @@ export default {
     }
   },
   async deleteAccount() {
+    if (!this.email) {
+    alert('Email is required to delete account.');
+    return;
+  }
+  if (!confirm(`Are you sure you want to delete the account for ${this.email}?`)) {
+    return;
+  }
       try {
         // Replace this URL with your real endpoint
-        await fetch('/api/delete-account', {
-          method: 'DELETE'
+        await fetch('https://us-central1-findme-eed39.cloudfunctions.net/deleteAccount', {
+          method: 'DELETE',
+          headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: this.email
+      })
         });
+        if (!response.ok) {
+      throw new Error('Failed to delete account');
+    }
+
+    const data = await response.json();
+    console.log('Account deleted:', data);
+
+    // Clear the email field
+    this.email = '';
+
+    // Optional: Show success message
+    alert('Account deleted successfully');
+
         
         // Optional: Show a success message, then refresh
         location.reload();
@@ -95,3 +123,4 @@ export default {
 };
 
 </script>
+
