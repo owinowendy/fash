@@ -14,27 +14,23 @@
         </v-col>
         <v-col md="3" sm="4" cols="12">
           <product-ratting-card
-          img="/products/image.jpg"
+            img="/products/image.jpg"
             :ratting="4"
             text="It is a long established"
-            
           />
         </v-col>
         <v-col md="3" sm="4" cols="12">
           <product-ratting-card
-          img="/products/imaged.jpg"
+            img="/products/imaged.jpg"
             :ratting="5"
             text="It is a long established"
-          
           />
         </v-col>
         <v-col md="3" sm="4" cols="12">
           <product-ratting-card
-          img="/products/imagee.jpg"
-
+            img="/products/imagee.jpg"
             :ratting="5"
             text="It is a long established"
-          
           />
         </v-col>
       </v-row>
@@ -51,6 +47,7 @@ import imgAPI from '@/assets/images/imgAPI';
 import Title from '../Title';
 import ProductRattingCard from '../Cards/ProductRatting';
 
+// Modify the ProductRattingCard to remove redirection
 export default {
   components: {
     'title-main': Title,

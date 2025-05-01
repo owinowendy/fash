@@ -75,52 +75,43 @@ export default {
     this.updateCopyrightText();
   },
   methods: {
-    updateCopyrightText() {
-      this.brand.fashion.footerText = 'Findme 2025';
-    }
+  updateCopyrightText() {
+    this.brand.fashion.footerText = 'Findme 2025';
   },
   async deleteAccount() {
     if (!this.email) {
-    alert('Email is required to delete account.');
-    return;
-  }
-  if (!confirm(`Are you sure you want to delete the account for ${this.email}?`)) {
-    return;
-  }
-      try {
-        // Replace this URL with your real endpoint
-        await fetch('https://us-central1-findme-eed39.cloudfunctions.net/deleteAccount', {
-          method: 'DELETE',
-          headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email: this.email
-      })
-        });
-        if (!response.ok) {
-      throw new Error('Failed to delete account');
+      alert('Email is required to delete account.');
+      return;
     }
+    if (!confirm(`Are you sure you want to delete the account for ${this.email}?`)) {
+      return;
+    }
+    try {
+      const response = await fetch('https://us-central1-findme-eed39.cloudfunctions.net/deleteAccount', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: this.email })
+      });
 
-    const data = await response.json();
-    console.log('Account deleted:', data);
-
-    // Clear the email field
-    this.email = '';
-
-    // Optional: Show success message
-    alert('Account deleted successfully');
-
-        
-        // Optional: Show a success message, then refresh
-        location.reload();
-      } catch (error) {
-        console.error('Error deleting account:', error);
-        // Optionally show error feedback
+      if (!response.ok) {
+        throw new Error('Failed to delete account');
       }
+
+      const data = await response.json();
+      console.log('Account deleted:', data);
+
+      this.email = '';
+      alert('Account deleted successfully');
+      location.reload();
+
+    } catch (error) {
+      console.error('Error deleting account:', error);
+      alert('An error occurred while deleting the account.');
     }
-
-};
-
+  }
+}
+}
 </script>
 

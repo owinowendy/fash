@@ -2,7 +2,7 @@
   <div class="root">
     <hidden point="xsDown">
       <div class="grid-25">
-        <img src="/products/image16.jpg" alt="trending">
+        <img src="/products/image9.jpg" alt="trending">
         <v-btn variant="text" class="overlay">
           <h5 class="use-text-subtitle2">
             Autumn Show
@@ -10,7 +10,7 @@
         </v-btn>
       </div>
       <div class="grid-50">
-        <img src="/products/image12.jpg" alt="trending">
+        <img src="/products/image11.jpg" alt="trending">
         <v-btn variant="text" class="overlay">
           <h5 class="use-text-subtitle2">
             New Trending
@@ -21,7 +21,7 @@
         </v-btn>
       </div>
       <div class="grid-25">
-        <img src="/products/image.jpg" alt="trending">
+        <img src="/products/imagen.jpg" alt="trending">
         <v-btn variant="text" class="overlay">
           <h5 class="use-text-subtitle2">
             Man Collection
@@ -36,7 +36,7 @@
       >
         <splide-slide>
           <div class="grid-25">
-            <img src="" alt="trending">
+            <img src="/products/image9.jpg" alt="trending">
             <v-btn variant="text" class="overlay">
               <h5 class="use-text-subtitle2">
                 Autumn Show
@@ -46,20 +46,20 @@
         </splide-slide>
         <splide-slide>
           <div class="grid-50">
-            <img src="/products/imagef.jpg" alt="trending">
+            <img src="/products/image11.jpg" alt="trending">
             <v-btn variant="text" class="overlay">
               <h5 class="use-text-subtitle2">
                 New Trending
               </h5>
               <h3 class="use-text-title">
-                2020
+                2025
               </h3>
             </v-btn>
           </div>
         </splide-slide>
         <splide-slide>
           <div class="grid-25">
-            <img src="" alt="trending">
+            <img src="/products/manzz.png" alt="trending">
             <v-btn variant="text" class="overlay">
               <h5 class="use-text-subtitle2">
                 Man Collection

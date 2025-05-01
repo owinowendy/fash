@@ -1,11 +1,11 @@
-@mixin overlay {
+@mixin overlay { 
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
   padding: 40px;
   top: 0;
-  left: 0
+  left: 0;
 };
 
 .root :deep(> div) {
@@ -17,27 +17,28 @@
     height: 100%;
   }
   @include breakpoints-up(sm) {
-    display: flex
+    display: flex;
   }
 }
+
 .grid-25 {
   position: relative;
   overflow: hidden;
   height: 300px;
   @include breakpoints-up(sm) {
-    width: 33%
+    width: 33%;
   }
   @include breakpoints-up(lg) {
-    width: 25%
+    width: 25%;
+    height: 350px;
   }
-  @include breakpoints-up(lg) {
-    height: 350px
-  }
+  
   &:hover {
     img {
-      transform: translateX(0px) !important
+      transform: translateX(0px) !important;
     }
   }
+
   img {
     transition: all 0.3s;
     min-height: 100%;
@@ -49,41 +50,47 @@
       transform: translateX(-10px);
     }
   }
+
   .overlay {
     background-image: linear-gradient(0deg, rgba(80, 145, 93, 0.64), transparent);
     @include overlay;
   }
+
   h5 {
     text-transform: uppercase;
     position: absolute;
     bottom: 50px;
     color: $palette-common-white;
-    font-weight: $font-regular
+    font-weight: $font-regular;
   }
 }
+
 .grid-50 {
   position: relative;
   overflow: hidden;
   height: 300px;
   @include breakpoints-up(sm) {
-    width: 33%
+    width: 33%;
   }
   @include breakpoints-up(md) {
-    width: 50%
+    width: 50%;
   }
   @include breakpoints-up(lg) {
     height: 350px;
   }
+  
   &:hover {
     img {
-      transform: scale(1.1)
+      transform: scale(1.1);
     }
   }
+
   img {
     transition: all 0.3s;
     height: 100%;
-    min-width: 100%
+    min-width: 100%;
   }
+
   .overlay {
     background-image: linear-gradient(270deg, rgba(37, 133, 50, 0.64), transparent);
     align-items: flex-end;
@@ -96,17 +103,115 @@
         align-items: center;
       }
     }
-    @include overlay
+    @include overlay;
   }
+
   h5 {
     text-transform: uppercase;
     color: $palette-common-white;
-    font-weight: $font-regular
+    font-weight: $font-regular;
   }
+
   h3 {
     text-transform: uppercase;
     color: $palette-common-white;
     font-weight: $font-bold;
-    text-decoration: underline
+    text-decoration: underline;
   }
+}
+
+// Add media querie for mobile responsiveness
+
+@include breakpoints-down(sm) {
+  .grid-25, .grid-50 {
+    width: 100% !important;  // Ensure both grid items take full width on mobile
+    height: auto;  // Allow flexible height for images on mobile
+  }
+
+  .grid-25 img, .grid-50 img {
+    object-fit: cover;  // Ensure the images fit well within the grid
+    width: 100%;  // Make sure the image fills the container
+    height: auto;
+  }
+
+  .overlay {
+    padding: 20px;  // Reduce padding on mobile for better alignment
+  }
+
+  h5 {
+    font-size: 14px;  // Adjust font size for mobile views
+    bottom: 30px;  // Move text up for better visibility on small screens
+  }
+
+  h3 {
+    font-size: 16px;  // Adjust font size for mobile views
+    bottom: 10px;  // Adjust position for mobile
+  }
+}
+
+@include breakpoints-up(sm) {
+  .grid-25, .grid-50 {
+    width: 33%;  // 3 items per row on small screens
+  }
+}
+/* Ensuring images take full container height */
+.root .grid-25 img, 
+.root .grid-50 img {
+  width: 100%;
+  object-fit: cover; /* Ensures the image covers the div properly */
+  height: 100%; /* Makes the image take up the full height */
+}
+
+/* Adjusting overlay button for better visibility */
+.root .overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+}
+
+/* Title styling */
+.root .use-text-subtitle2 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.root .use-text-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 600px) {
+  .root .grid-25,
+  .root .grid-50 {
+    height: 200px; /* Adjust this to whatever height works well for your content */
+  }
+
+  /* Ensuring the overlay text is centered and more readable */
+  .root .overlay h5,
+  .root .overlay h3 {
+    text-align: center;
+  }
+
+  .root .grid-50 img {
+    height: 100%; /* Ensure the image fills the height of its container */
+    width: 100%;  /* Ensure the image fills the width of its container */
+    object-fit: cover;  /* Preserve aspect ratio without distortion */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  @include breakpoints-down(sm) {
+    .root .grid-50 img {
+      height: auto;  /* Adjust height for better scaling on mobile */
+      object-fit: cover;  /* Ensure the image fits well while maintaining aspect ratio */
+      width: 100%;  /* Ensure the image takes full width */
+    }
+  }
+  
 }

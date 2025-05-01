@@ -5,15 +5,16 @@
       <img v-if="!play || isMobile" :src="imgAPI.fashion[0]" alt="cover">
       <div v-if="yt.use">
         <YouTube
-          v-if="isDesktop"
-          ref="youtube"
-          :src="videoId"
-          :vars="playerVars"
-          :width="1080"
-          :height="720"
-          @ready="playing"
-          @state-change="ended"
-        />
+  v-if="yt.use"
+  ref="youtube"
+  :src="videoId"
+  :vars="playerVars"
+  :width="1080"
+  :height="720"
+  @ready="playing"
+  @state-change="ended"
+/>
+
       </div>
       <div class="caption">
         <v-container class="max-md">

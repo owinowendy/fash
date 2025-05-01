@@ -1,22 +1,25 @@
 <template>
   <div class="mobile-nav paper-nav">
     <div
-      :class="{ 'menu-open': open }"
-      class="menu"
+      v-show="open"
+      :class="{ 'menu': true, 'menu-open': open }"
     >
       <v-list
         dense
         tag="nav"
+        role="navigation"
+        aria-label="Mobile navigation menu"
       >
         <v-list-item
           v-for="(item, index) in navMenu"
-          :key="index"
+          :key="item"
           :href="'#' + item"
-          link
-          :style="{ animationDuration: index * 0.15 + 's' }"
         >
-          <v-list-item-title class="menu-list">
-            {{ $t('fashionLanding.header_'+item) }}
+          <v-list-item-title
+            class="menu-list"
+            :style="{ animationDelay: (index * 0.15) + 's' }"
+          >
+            {{ $t('fashionLanding.header_' + item) }}
           </v-list-item-title>
         </v-list-item>
       </v-list>
