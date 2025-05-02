@@ -1,3 +1,4 @@
+import TermsOfUse from "~/pages/terms of use.vue";
 
 
 const menu = [
@@ -6,7 +7,10 @@ const menu = [
   'categories',
   'featured',
   'testimonials',
-  'privacy_policy',
+  'privacy_policy', 
+  TermsOfUse,
+
+
   
 ];
 

@@ -87,7 +87,7 @@
     margin-top: section-margin(3px);
   }
   @include breakpoints-down(xs) {
-    margin-top: section-margin(2px);
+    margin-top: se ction-margin(2px);
   }
 }
 .container-wrap {
