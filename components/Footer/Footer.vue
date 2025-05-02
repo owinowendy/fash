@@ -28,7 +28,7 @@
             v-for="(item, index) in menu"
             :key="index"
           >
-            <a :href="item=='privacy_policy'? item :'#' + item">
+            <a :href="(item=='privacy_policy' || item=='terms')? item :'#' + item">
               {{ $t('fashionLanding.header_' + item) }}
             </a>
           </li>
